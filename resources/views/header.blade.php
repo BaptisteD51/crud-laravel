@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Médicaments</title>
+    <title>
+        @if (isset($title))
+            {{$title}}
+        @endif
+    </title>
     <style>
         td,th{
             border:solid 1px;

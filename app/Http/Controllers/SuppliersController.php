@@ -8,15 +8,24 @@ use App\Models\Supplier;
 class SuppliersController extends Controller
 {
    static function index(){
-      return view('suppliers', ['suppliers' => Supplier::all(),]);
+      return view('suppliers', [
+         'suppliers' => Supplier::all(),
+         'title' => 'Tous les fournisseurs'
+      ]);
    }
 
    static function view($id){
-      return view('view-supplier', ['supplier' => Supplier::find($id),]);
+      $supplier = Supplier::find($id);
+      return view('view-supplier', [
+         'supplier' => $supplier,
+         'title' => $supplier->name
+      ]);
    }
 
    static function create(){
-      return view('create-supplier');
+      return view('create-supplier',[
+         'title' => 'Créer un fournisseur'
+      ]);
    }
 
    static function store(Request $request){
@@ -29,7 +38,11 @@ class SuppliersController extends Controller
    }
 
    static function modify($id){
-      return view('modify-supplier', ['supplier' => Supplier::find($id)]);
+      $supplier = Supplier::find($id);
+      return view('modify-supplier', [
+         'supplier' => $supplier,
+         'title' => 'Modifier '.$supplier->name
+      ]);
    }
 
    static function save($id, Request $request){
