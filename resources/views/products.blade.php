@@ -24,4 +24,5 @@
         </tr>
     @endforeach
 </table>
+<p><a href="/suppliers">Voir les fournisseurs</a></p>
 @include('footer')

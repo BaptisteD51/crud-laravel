@@ -1,4 +1,5 @@
 @include('header')
+<p><a href="/products">Retour</a></p>
 <h1>Modifier le produit</h1>
 <form action="/products/modify/{{$product->id}}" method="POST">
     @csrf

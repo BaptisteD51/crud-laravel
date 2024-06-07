@@ -1,5 +1,6 @@
 @include('header')
 <h1>{{$supplier->name}}</h1>
+<p><a href="/suppliers/modify/{{$supplier->id}}">Modifier</a></p>
 
 <h2>Adresse : </h2>
 <p>{{$supplier->adress}}</p>
@@ -13,14 +14,4 @@
         <li>{{$product->name}} - <a href="/products/view/{{$product->id}}">Voir</a></li>
     @endforeach
 </ul>
-{{-- @foreach ($suppliers as $supplier)
-    <tr>
-        <td>{{$supplier->name}}</td>
-        <td>{{$supplier->adress}}</td>
-        <td>{{$supplier->website}}</td>
-        <td><a href="/suppliers/view/{{$supplier->id}}">Voir</a></td>
-        <td><a href="/suppliers/modify/{{$supplier->id}}">Modifier</a></td>
-    </tr>
-@endforeach --}}
-</table>
 @include('footer')

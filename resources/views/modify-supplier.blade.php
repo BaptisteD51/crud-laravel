@@ -1,5 +1,6 @@
 @include('header')
-<h1>Modifier le fournisseur Fournisseur</h1>
+<p><a href="/suppliers">Retour</a></p>
+<h1>Modifier le fournisseur</h1>
 
 <form action="/suppliers/modify/{{$supplier->id}}" method='post'>
     @csrf

@@ -11,10 +11,11 @@
     <tr>
         <td>{{$supplier->name}}</td>
         <td>{{$supplier->adress}}</td>
-        <td>{{$supplier->website}}</td>
+        <td><a href="{{$supplier->website}}">{{$supplier->website}}</a></td>
         <td><a href="/suppliers/view/{{$supplier->id}}">Voir</a></td>
         <td><a href="/suppliers/modify/{{$supplier->id}}">Modifier</a></td>
     </tr>
 @endforeach
 </table>
+<p><a href="/products">Retourner aux produits</a></p>
 @include('footer')
